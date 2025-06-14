@@ -41,9 +41,13 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        working-directory: terraforms
+
 
       - name: Terraform Plan
         run: terraform plan
+        working-directory: terraforms
+
 
   terraform-apply:
     name: Terraform Apply
@@ -68,6 +72,8 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        working-directory: terraforms
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+        working-directory: terraforms
