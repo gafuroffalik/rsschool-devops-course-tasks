@@ -1,14 +1,14 @@
 provider "aws" {
- region = var.region
+  region = var.region
 }
 
 resource "aws_s3_bucket" "spacelift_test" {
-   bucket = "spacelift-test1"
-   acl = "private"  
+  bucket = "spacelift-test1"
+  acl    = "private"
 }
 
 resource "aws_s3_bucket_public_access_block" "block_public_access" {
-  bucket = aws_s3_bucket.spacelift_test.id
+  bucket                  = aws_s3_bucket.spacelift_test.id
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true

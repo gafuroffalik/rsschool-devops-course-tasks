@@ -1,15 +1,15 @@
 variable "name" {
-  type        = string
-  default     = "dynamic-aws-creds-operator"
+  type    = string
+  default = "dynamic-aws-creds-operator"
 }
 
 variable "region" {
-  type        = string
-  default     = "ca-central-1"
+  type    = string
+  default = "ca-central-1"
 }
 
 
 variable "ttl" {
-  type        = string
-  default     = "1"
+  type    = string
+  default = "1"
 }
